@@ -31,6 +31,21 @@
 - Keep unrelated changes out of the PR
 - Add labels when they affect release notes or version bumps
 
+## Label Guide
+
+- `bug`: defects, regressions, or incorrect behavior
+- `enhancement`: new user or engineering capability
+- `task`: scoped implementation or maintenance work
+- `documentation`: docs, prompts, specs, and written guidance
+- `ci`: GitHub Actions and CI workflow changes
+- `tooling`: repository automation and developer workflow changes
+- `template`: reusable template structure changes
+- `dependencies`: dependency or third-party action updates
+- `security`: security-sensitive work
+- `needs-spec`: change is blocked on better requirements
+- `major`: breaking or version-major release impact
+- `skip-changelog`: exclude the PR from release notes
+
 ## Release Expectations
 
 - Use semantic versioning tags such as `v0.1.0`

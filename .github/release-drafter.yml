@@ -15,11 +15,18 @@ categories:
     labels:
       - documentation
       - docs
+  - title: "Dependencies"
+    labels:
+      - dependencies
   - title: "Templates And Tooling"
     labels:
       - tooling
       - template
       - ci
+      - task
+  - title: "Security"
+    labels:
+      - security
   - title: "Fixes"
     labels:
       - bug
@@ -47,6 +54,9 @@ version-resolver:
       - tooling
       - template
       - ci
+      - task
+      - dependencies
+      - security
   default: patch
 
 autolabeler:

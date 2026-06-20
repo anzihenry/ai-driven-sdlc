@@ -1,0 +1,62 @@
+[
+  {
+    "name": "bug",
+    "color": "d73a4a",
+    "description": "Something is not working as expected."
+  },
+  {
+    "name": "enhancement",
+    "color": "a2eeef",
+    "description": "New capability or meaningful product improvement."
+  },
+  {
+    "name": "task",
+    "color": "c5def5",
+    "description": "Scoped implementation or maintenance task."
+  },
+  {
+    "name": "documentation",
+    "color": "0075ca",
+    "description": "Documentation, specs, prompts, or written guidance changes."
+  },
+  {
+    "name": "ci",
+    "color": "5319e7",
+    "description": "Continuous integration or GitHub workflow changes."
+  },
+  {
+    "name": "tooling",
+    "color": "7057ff",
+    "description": "Repository tooling, automation, or developer workflow updates."
+  },
+  {
+    "name": "template",
+    "color": "0e8a16",
+    "description": "Changes to the reusable project template itself."
+  },
+  {
+    "name": "dependencies",
+    "color": "0366d6",
+    "description": "Dependency or third-party action updates."
+  },
+  {
+    "name": "security",
+    "color": "b60205",
+    "description": "Security-sensitive changes or follow-up work."
+  },
+  {
+    "name": "needs-spec",
+    "color": "fbca04",
+    "description": "Work needs a clearer spec or acceptance criteria before merge."
+  },
+  {
+    "name": "skip-changelog",
+    "color": "ededed",
+    "description": "Exclude this pull request from release notes."
+  },
+  {
+    "name": "major",
+    "color": "d93f0b",
+    "description": "Release-worthy breaking or major change."
+  }
+]

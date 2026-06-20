@@ -6,6 +6,7 @@ This directory contains repository-level collaboration and automation defaults.
 
 - A stack-agnostic CI workflow
 - Dependabot configuration for repository automation
+- Repository label catalog and PR auto-labeling
 - Pull request template
 - Issue templates
 - CODEOWNERS

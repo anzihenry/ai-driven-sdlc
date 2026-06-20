@@ -1,0 +1,59 @@
+documentation:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "*.md"
+              - "doc/**"
+              - "prompts/**"
+
+ci:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - ".github/workflows/**"
+
+tooling:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - ".github/**"
+              - ".editorconfig"
+              - ".gitignore"
+
+template:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - "README.md"
+              - "CONTRIBUTING.md"
+              - "src/**"
+
+dependencies:
+  - any:
+      - head-branch:
+          - "^dependabot/"
+      - changed-files:
+          - any-glob-to-any-file:
+              - ".github/dependabot.yml"
+              - "**/package.json"
+              - "**/package-lock.json"
+              - "**/pnpm-lock.yaml"
+              - "**/yarn.lock"
+              - "**/requirements.txt"
+              - "**/poetry.lock"
+              - "**/pyproject.toml"
+              - "**/Dockerfile"
+
+security:
+  - any:
+      - changed-files:
+          - any-glob-to-any-file:
+              - ".github/workflows/**"
+              - ".github/dependabot.yml"
+
+task:
+  - any:
+      - head-branch:
+          - "^task/"
+          - "^chore/"
+          - "^docs/"
