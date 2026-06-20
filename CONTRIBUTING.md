@@ -29,6 +29,14 @@
 - Summarize risk and validation steps
 - Include screenshots or logs when they help review
 - Keep unrelated changes out of the PR
+- Add labels when they affect release notes or version bumps
+
+## Release Expectations
+
+- Use semantic versioning tags such as `v0.1.0`
+- Let the release draft collect merged changes on `main`
+- Use the manual GitHub Release workflow to publish a reviewed version
+- Use `skip-changelog` on PRs that should stay out of release notes
 
 ## Review Guidelines
 

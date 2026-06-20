@@ -5,9 +5,11 @@ This directory contains repository-level collaboration and automation defaults.
 ## Included
 
 - A stack-agnostic CI workflow
+- Dependabot configuration for repository automation
 - Pull request template
 - Issue templates
 - CODEOWNERS
+- Release drafting and manual release workflows
 
 ## Next Upgrade
 
@@ -17,4 +19,5 @@ Once the application stack is selected, extend `workflows/ci.yml` with:
 - Test
 - Build
 - Security scanning
-- Dependency update automation
+
+Also extend `.github/dependabot.yml` with stack-specific ecosystems such as `npm`, `pip`, or `docker`.

@@ -64,3 +64,5 @@ It is designed to help teams keep requirements, implementation, review, and deci
 - Add the actual application stack inside `src/`
 - Add CI checks once the stack is chosen
 - Add testing and deployment workflows for the selected platform
+- Extend Dependabot for the chosen package ecosystem
+- Use the GitHub Release workflow for versioned template releases

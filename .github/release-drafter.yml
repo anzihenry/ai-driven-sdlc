@@ -1,0 +1,73 @@
+name-template: "v$RESOLVED_VERSION"
+tag-template: "v$RESOLVED_VERSION"
+template: |
+  ## Summary
+
+  $CHANGES
+
+  ## Notes
+
+  - Review stack-specific test and deployment requirements before promoting this release.
+  - Update documentation if project workflows or templates changed.
+
+categories:
+  - title: "Documentation"
+    labels:
+      - documentation
+      - docs
+  - title: "Templates And Tooling"
+    labels:
+      - tooling
+      - template
+      - ci
+  - title: "Fixes"
+    labels:
+      - bug
+      - fix
+  - title: "Features"
+    labels:
+      - enhancement
+      - feature
+
+change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
+change-title-escapes: "\\<*_&"
+version-resolver:
+  major:
+    labels:
+      - major
+  minor:
+    labels:
+      - enhancement
+      - feature
+  patch:
+    labels:
+      - bug
+      - fix
+      - documentation
+      - tooling
+      - template
+      - ci
+  default: patch
+
+autolabeler:
+  - label: documentation
+    files:
+      - "*.md"
+      - "doc/**/*"
+      - "prompts/**/*"
+  - label: ci
+    files:
+      - ".github/workflows/**/*"
+  - label: tooling
+    files:
+      - ".github/**/*"
+      - ".editorconfig"
+      - ".gitignore"
+  - label: template
+    files:
+      - "README.md"
+      - "CONTRIBUTING.md"
+      - "src/**/*"
+
+exclude-labels:
+  - skip-changelog
