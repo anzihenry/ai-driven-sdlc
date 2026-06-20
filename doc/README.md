@@ -14,3 +14,10 @@ Use this folder to keep the project understandable for both humans and AI tools.
 - Update docs as part of delivery, not after delivery
 - Write for future teammates who were not in the room
 - Make requirements explicit before asking AI to implement them
+
+## Recommended Starting Points
+
+- `specs/project-brief.md` for project context
+- `process/ai-workflow.md` for AI collaboration flow
+- `process/versioning-and-releases.md` for version and release policy
+- `process/release-checklist.md` for release execution

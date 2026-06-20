@@ -32,6 +32,8 @@ jobs:
             "doc/decisions/ADR-template.md"
             "doc/process/ai-workflow.md"
             "doc/process/delivery-checklist.md"
+            "doc/process/versioning-and-releases.md"
+            "doc/process/release-checklist.md"
             "prompts/feature-implementation.md"
             "prompts/code-review.md"
             "src/README.md"

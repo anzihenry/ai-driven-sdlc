@@ -35,6 +35,7 @@ It is designed to help teams keep requirements, implementation, review, and deci
 4. Use the prompt templates in `prompts/` to drive implementation and review
 5. Build the actual application inside `src/`
 6. Capture acceptance notes back into the relevant spec
+7. Use `doc/process/versioning-and-releases.md` before publishing a release
 
 ## How To Use This Template
 
@@ -58,6 +59,7 @@ It is designed to help teams keep requirements, implementation, review, and deci
 - Write ADRs only for decisions that affect future work
 - Treat AI outputs as drafts until reviewed by a human
 - Store reusable prompts in version control
+- Use labels consistently so release automation stays reliable
 
 ## Next Steps
 

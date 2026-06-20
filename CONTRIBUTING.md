@@ -52,6 +52,8 @@
 - Let the release draft collect merged changes on `main`
 - Use the manual GitHub Release workflow to publish a reviewed version
 - Use `skip-changelog` on PRs that should stay out of release notes
+- Follow `doc/process/versioning-and-releases.md` when choosing the next version
+- Run `doc/process/release-checklist.md` before publishing
 
 ## Review Guidelines
 
