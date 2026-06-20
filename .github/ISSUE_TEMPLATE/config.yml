@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Project brief
+    url: https://github.com/your-org/your-repo/blob/main/doc/specs/project-brief.md
+    about: Read the project context before opening product-facing issues.
+  - name: Contribution guide
+    url: https://github.com/your-org/your-repo/blob/main/CONTRIBUTING.md
+    about: Review the repository workflow and review expectations.
