@@ -9,7 +9,7 @@ Its purpose is to answer four questions clearly:
 - Which files are optional extensions
 - What checks should be run before adoption is considered complete
 
-The machine-readable source of truth for CI is `.github/template-contract.json`.
+The machine-readable source of truth for CI is `.github/template-contract.json`. CI validates that the adoption levels in this document stay synchronized with that manifest.
 
 ## Contract Principles
 
@@ -165,4 +165,4 @@ When this template evolves, maintainers should evaluate changes against this con
 
 If the answer materially affects adopters, the roadmap, release notes, or migration guidance should say so explicitly.
 
-When updating the contract levels in this document, update `.github/template-contract.json` in the same change so CI continues to reflect the written policy.
+When updating the contract levels in this document, update `.github/template-contract.json` in the same change. CI checks the documented Level 1, Level 2, and Level 3 file lists against the manifest so drift is caught before merge.

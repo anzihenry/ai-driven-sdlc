@@ -9,6 +9,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[2]
 CONTRACT_PATH = ROOT / ".github" / "template-contract.json"
+CONTRACT_DOC_PATH = ROOT / "doc" / "process" / "minimum-template-contract.md"
 
 
 def load_contract() -> dict:
@@ -53,11 +54,102 @@ def ensure_forbidden_absent(paths: list[str]) -> list[str]:
     return found
 
 
+def extract_contract_doc_level(heading: str, marker: str) -> list[str]:
+    text = CONTRACT_DOC_PATH.read_text()
+    try:
+        section = text.split(heading, 1)[1]
+        section = section.split("### ", 1)[0]
+        list_text = section.split(marker, 1)[1]
+    except IndexError:
+        print(f"Could not find contract documentation section for {heading.strip()}")
+        return []
+
+    paths = []
+    for line in list_text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("- `") and stripped.endswith("`"):
+            paths.append(stripped.removeprefix("- `").removesuffix("`"))
+            continue
+        if paths and stripped and not stripped.startswith("- "):
+            break
+    return paths
+
+
+def ensure_contract_doc_matches_manifest(contract: dict) -> list[str]:
+    expected_by_level = contract["adoption_levels"]
+    documented_by_level = {
+        "level_1": extract_contract_doc_level(
+            "### Level 1: Minimum Supported Adoption",
+            "Teams at this level should keep:",
+        ),
+        "level_2_additional": extract_contract_doc_level(
+            "### Level 2: Recommended Team Adoption",
+            "Teams at this level should keep everything in Level 1, plus:",
+        ),
+        "level_3_additional": extract_contract_doc_level(
+            "### Level 3: Full Template Adoption",
+            "Teams at this level should keep everything in Level 2, plus:",
+        ),
+    }
+
+    mismatches = []
+    for level, expected in expected_by_level.items():
+        documented = documented_by_level[level]
+        if documented == expected:
+            continue
+        missing_from_doc = [path for path in expected if path not in documented]
+        extra_in_doc = [path for path in documented if path not in expected]
+        if missing_from_doc:
+            mismatches.append(f"{level} missing from docs: {missing_from_doc}")
+        if extra_in_doc:
+            mismatches.append(f"{level} extra in docs: {extra_in_doc}")
+        if not missing_from_doc and not extra_in_doc:
+            mismatches.append(f"{level} has the same paths but a different order")
+
+    if mismatches:
+        print("Contract documentation and machine-readable manifest are out of sync:")
+        for mismatch in mismatches:
+            print(f"  - {mismatch}")
+    return mismatches
+
+
+def ensure_level_files_are_classified(contract: dict) -> list[str]:
+    level_1_allowed = set(contract["repository_required_files"]) | set(
+        contract["core_contract_files"]
+    )
+    level_2_allowed = set(contract["recommended_contract_files"])
+    level_3_allowed = set(contract["optional_extension_files"])
+    checks = {
+        "level_1": (contract["adoption_levels"]["level_1"], level_1_allowed),
+        "level_2_additional": (
+            contract["adoption_levels"]["level_2_additional"],
+            level_2_allowed,
+        ),
+        "level_3_additional": (
+            contract["adoption_levels"]["level_3_additional"],
+            level_3_allowed,
+        ),
+    }
+
+    unclassified = []
+    for level, (paths, allowed) in checks.items():
+        for path in paths:
+            if path not in allowed:
+                unclassified.append(f"{level}: {path}")
+    if unclassified:
+        print("Adoption-level files are missing from their validation category:")
+        for path in unclassified:
+            print(f"  - {path}")
+    return unclassified
+
+
 def main() -> int:
     contract = load_contract()
 
     missing = []
     empty = []
+    contract_mismatches = []
+    unclassified = []
 
     missing += ensure_paths_exist(
         contract["repository_required_files"], "repository-required files"
@@ -74,13 +166,15 @@ def main() -> int:
     )
 
     forbidden = ensure_forbidden_absent(contract["forbidden_paths"])
+    contract_mismatches = ensure_contract_doc_matches_manifest(contract)
+    unclassified = ensure_level_files_are_classified(contract)
 
-    if missing or empty or forbidden:
+    if missing or empty or forbidden or contract_mismatches or unclassified:
         return 1
 
     print("Template contract validation passed.")
     print(
-        "Validated core contract files and treated recommended/optional surfaces as present-if-kept."
+        "Validated core contract files, adoption-level sync, and present-if-kept optional surfaces."
     )
     return 0
 

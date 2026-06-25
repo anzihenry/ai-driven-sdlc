@@ -1,4 +1,46 @@
 {
+  "adoption_levels": {
+    "level_1": [
+      "README.md",
+      "CONTRIBUTING.md",
+      "doc/README.md",
+      "doc/specs/project-brief.md",
+      "doc/specs/feature-spec-template.md",
+      "doc/decisions/ADR-template.md",
+      "doc/process/ai-workflow.md",
+      "doc/process/delivery-checklist.md",
+      "prompts/feature-implementation.md",
+      "prompts/code-review.md"
+    ],
+    "level_2_additional": [
+      ".github/PULL_REQUEST_TEMPLATE.md",
+      ".github/ISSUE_TEMPLATE/bug_report.md",
+      ".github/ISSUE_TEMPLATE/feature_request.md",
+      ".github/ISSUE_TEMPLATE/task_request.md",
+      ".github/dependabot.yml",
+      ".github/labeler.yml",
+      ".github/labels.json",
+      "doc/process/adoption-walkthrough.md",
+      "doc/process/rollout-notes-template.md",
+      "doc/process/retrospective-learning-notes-template.md",
+      "doc/process/versioning-and-releases.md",
+      "doc/process/release-checklist.md",
+      "prompts/README.md",
+      "prompts/planning.md",
+      "prompts/acceptance-qa.md"
+    ],
+    "level_3_additional": [
+      ".github/release-drafter.yml",
+      ".github/workflows/ci.yml",
+      ".github/workflows/labeler.yml",
+      ".github/workflows/release-drafter.yml",
+      ".github/workflows/release.yml",
+      ".github/workflows/sync-labels.yml",
+      ".github/README.md",
+      ".github/CODEOWNERS",
+      "src/README.md"
+    ]
+  },
   "repository_required_files": [
     ".editorconfig",
     ".gitignore",
