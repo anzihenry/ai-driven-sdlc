@@ -65,6 +65,7 @@ The smallest useful adoption of this template usually includes:
 - CI or manual checks that verify the parts of the template you decide to keep
 
 For the formal keep/customize/remove contract, see `doc/process/minimum-template-contract.md`.
+For a step-by-step adoption path, see `doc/process/adoption-walkthrough.md`.
 
 ## Suggested Conventions
 

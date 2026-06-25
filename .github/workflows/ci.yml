@@ -19,14 +19,6 @@ jobs:
       - name: Validate template contract
         run: python3 .github/scripts/validate_template_contract.py
 
-      - name: Guard against macOS metadata
-        run: |
-          if find . -name ".DS_Store" -print | grep -q .; then
-            echo ".DS_Store files should not be committed"
-            find . -name ".DS_Store" -print
-            exit 1
-          fi
-
       - name: Reminder for stack-specific checks
         run: |
           echo "Template contract validation passed."

@@ -57,8 +57,13 @@ Teams at this level should keep everything in Level 1, plus:
 - `.github/dependabot.yml`
 - `.github/labeler.yml`
 - `.github/labels.json`
+- `doc/process/adoption-walkthrough.md`
+- `doc/process/rollout-notes-template.md`
+- `doc/process/retrospective-learning-notes-template.md`
 - `doc/process/versioning-and-releases.md`
 - `doc/process/release-checklist.md`
+- `prompts/planning.md`
+- `prompts/acceptance-qa.md`
 
 This level is the default recommendation for teams that want repeatable review and release habits.
 
