@@ -14,6 +14,7 @@ Repository context:
 - Repository purpose: [summarize the project or template]
 - Relevant files or directories: [list paths]
 - Existing conventions to preserve: [style, architecture, docs, tests, workflow]
+- Adoption level, repository type, and contract surfaces affected: [if relevant]
 
 Spec context:
 [Link to or paste the relevant feature spec, project brief section, or ADR.]
@@ -32,6 +33,8 @@ Implementation constraints:
 - Do not introduce speculative abstractions.
 - Do not remove or rewrite unrelated user changes.
 - Explain any assumption that affects behavior, adoption, security, or release impact.
+- Do not invent stack-specific requirements that are not in the spec or repository guidance.
+- If changing contract-governed files, update docs and `.github/template-contract.json` together.
 
 Tasks:
 1. Inspect the current repository before editing.
@@ -39,7 +42,7 @@ Tasks:
 3. Implement the smallest complete solution.
 4. Add or update tests, docs, examples, or validation checks when appropriate.
 5. Run the relevant validation commands.
-6. Summarize changed files, validation results, assumptions, and remaining risks.
+6. Summarize changed files, validation results, assumptions, contract impact, and remaining risks.
 
 Validation expected:
 - Automated checks: [commands]
@@ -54,5 +57,7 @@ Definition of done:
 Response format:
 - Summary of what changed
 - Validation performed
+- Validation not performed, if any
+- Contract or adopter impact
 - Risks or follow-ups
 ```

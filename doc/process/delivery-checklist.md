@@ -34,6 +34,7 @@ The goal is to confirm that the change is scoped, reviewable, validated, and cle
 - [ ] AI assistance used is disclosed
 - [ ] Files or areas changed by AI are reviewed by a human
 - [ ] AI-generated assumptions are documented or removed
+- [ ] Hidden assumptions are named and either verified or accepted explicitly
 - [ ] Human reviewer challenged correctness, security, and requirement fit
 - [ ] Work that requires human judgment was not delegated blindly to AI
 
@@ -50,8 +51,10 @@ The goal is to confirm that the change is scoped, reviewable, validated, and cle
 
 - [ ] Automated checks were run and results are recorded
 - [ ] Manual verification was completed when needed
+- [ ] Automated and manual validation boundaries are clear
 - [ ] Documentation was reviewed for consistency
 - [ ] Examples, prompts, or templates were exercised when relevant
+- [ ] Validation claims include evidence, not only assertions
 - [ ] Known validation gaps are explicitly documented
 - [ ] Residual risk is acceptable to the reviewer
 
@@ -62,6 +65,7 @@ The goal is to confirm that the change is scoped, reviewable, validated, and cle
 - [ ] Follow-up work is captured with owner or tracking location
 - [ ] Deferred work is intentional and visible
 - [ ] Release or migration notes are prepared when needed
+- [ ] Retrospective learning notes are planned if AI assistance revealed reusable workflow lessons
 
 ## Final Review
 

@@ -14,6 +14,7 @@ Repository context:
 - Repository purpose: [summarize the project or template]
 - Current state: [known files, docs, modules, workflows, or constraints]
 - Existing decisions to preserve: [ADRs, roadmap decisions, release policy, team conventions]
+- Adoption level and repository type, if known: [Level 1/2/3 and type from multi-stack adoption guide]
 
 Planning constraints:
 - Keep the plan grounded in current repository state.
@@ -21,14 +22,16 @@ Planning constraints:
 - Prefer small, reviewable delivery slices.
 - Do not propose implementation work that lacks an acceptance signal.
 - Call out decisions that need human approval before coding.
+- Call out hidden assumptions and missing validation evidence.
 
 Tasks:
 1. Inspect or summarize the current context.
 2. Identify the real problem and likely users or stakeholders.
 3. Split the work into specs, decisions, tasks, and follow-ups.
 4. Recommend the smallest useful first slice.
-5. List risks, unknowns, and validation needs.
-6. Suggest which prompt or template should be used next.
+5. List risks, unknowns, hidden assumptions, and validation needs.
+6. Identify whether rollout notes or retrospective learning notes may be needed.
+7. Suggest which prompt or template should be used next.
 
 Expected output:
 - Problem framing
@@ -36,7 +39,9 @@ Expected output:
 - Proposed specs or docs to create or update
 - Suggested implementation slices
 - Open decisions
+- Hidden assumptions
 - Validation strategy
+- Follow-up artifacts to create
 - Recommended next step
 
 Context to include:

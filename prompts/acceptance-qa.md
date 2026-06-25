@@ -17,6 +17,7 @@ Implementation context:
 - Changed files or PR: [diff, commit range, PR link, or summary]
 - Validation already run: [commands and results]
 - Known risks or constraints: [list]
+- Adoption level, repository type, or contract impact: [if relevant]
 
 Review constraints:
 - Derive checks from the spec, not from assumptions.
@@ -24,13 +25,15 @@ Review constraints:
 - Include manual checks only when automation cannot reasonably cover the behavior.
 - Call out missing evidence clearly.
 - Flag any spec ambiguity that blocks confident acceptance.
+- Separate fake or claimed validation from verified evidence.
 
 Tasks:
 1. Extract acceptance criteria from the spec.
 2. Turn each criterion into concrete checks.
 3. Identify automated tests, manual walkthroughs, documentation checks, and release checks.
 4. Compare existing validation evidence with required evidence.
-5. List blockers, follow-ups, and residual risks.
+5. Identify hidden assumptions and contract or adopter impact.
+6. List blockers, follow-ups, and residual risks.
 
 Expected output:
 - Acceptance checklist
@@ -39,5 +42,7 @@ Expected output:
 - Required manual checks
 - Documentation and release checks
 - Missing evidence
+- Hidden assumptions
+- Contract or adopter impact
 - Acceptance recommendation: accept, accept with follow-ups, or block
 ```

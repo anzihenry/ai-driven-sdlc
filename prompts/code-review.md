@@ -24,13 +24,16 @@ Focus on:
 - Missing tests, docs, examples, or validation
 - Requirement drift from the spec
 - Unclear assumptions or hidden migration cost
+- Contract drift between written guidance and `.github/template-contract.json`
+- Fake validation claims or unverifiable acceptance evidence
 
 Instructions:
 1. List findings first, ordered by severity.
 2. Include file and line references when possible.
 3. Explain why each finding matters and what would make it safe to merge.
 4. Keep summaries brief.
-5. If no issues are found, say that explicitly and mention residual risk.
+5. Challenge hidden assumptions, over-scaffolding, and unsupported stack-specific guidance.
+6. If no issues are found, say that explicitly and mention residual risk.
 
 Severity guide:
 - P0: Blocks release or causes severe user/adopter harm
@@ -47,6 +50,9 @@ Open questions:
 
 Validation gaps:
 - [gap]
+
+Contract or adopter impact:
+- [impact]
 
 Summary:
 [brief overall assessment]
