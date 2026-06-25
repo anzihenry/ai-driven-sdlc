@@ -36,6 +36,12 @@ The outcome should be a repository that is useful as:
 - a documentation and workflow standard for new teams
 - a governed repository that can evolve without losing portability
 
+## Current Progress
+
+- Phase 0 is complete: template positioning, placeholder cleanup, minimum template contract, and contract-aware CI are in place.
+- Phase 1 is complete: core specs, ADRs, delivery checklist, prompt pack, adoption walkthrough, rollout notes, and learning notes are available and covered by the template contract.
+- Phase 2 is next: define multi-stack adoption guidance, including repository patterns, `src/` usage, CI extensions, Dependabot extensions, and prompt adjustments by project type.
+
 ## Guiding Principles
 
 - Preserve stack agnosticism unless a convention clearly improves reuse
