@@ -13,6 +13,24 @@ The template stays stack-agnostic. Downstream teams should add stack-specific co
 - Tune prompts with stack-specific validation commands and risk areas
 - Avoid turning examples into hidden requirements
 
+## Universal And Stack-Variable Conventions
+
+Use this table to decide what should remain consistent across adopters and what may change by stack.
+
+| Area | Universal Convention | Stack-Variable Convention |
+| --- | --- | --- |
+| Project brief | Every adoption should explain purpose, users, outcomes, constraints, risks, and first useful slice. | Domain language, success signals, users, and constraints vary by project. |
+| Feature specs | Specs should define context, goal, scope, scenarios, requirements, AI boundaries, acceptance criteria, validation, rollout, and risks. | Requirement details, UX notes, data model, and validation methods vary by stack. |
+| ADRs | Decisions should record context, choice, alternatives, adopter impact, migration cost, AI usage boundary, validation evidence, and follow-up path. | Decision topics and technical alternatives vary by architecture, platform, and ecosystem. |
+| Prompt flow | Teams should have prompts for planning, implementation, review, and acceptance. | Prompt context should name stack-specific commands, files, frameworks, and risks. |
+| Contract validation | Retained template surfaces should stay aligned with `doc/process/minimum-template-contract.md` and `.github/template-contract.json`. | Downstream teams may choose Level 1, Level 2, or Level 3 adoption and may remove optional surfaces intentionally. |
+| Review evidence | Review should connect changes back to a spec, ADR, issue, or checklist and include validation evidence. | Evidence may be unit tests, browser checks, API tests, simulator runs, package builds, docs checks, or manual walkthroughs. |
+| Source layout | The chosen source layout should be documented and understandable to new contributors. | Code may live in `src/`, stack-specific subdirectories, framework defaults, or an existing repository layout. |
+| Build commands | Local and CI validation commands should be documented. | Commands vary by package manager, language, framework, platform, and deployment target. |
+| Dependency ecosystem | Dependency update rules should match real manifests and ownership. | Ecosystems may include GitHub Actions, npm, pip, gomod, cargo, gradle, Docker, or others. |
+| Deployment checks | Release and rollout risk should be considered before merge. | Deployment checks vary by hosting platform, app store, package registry, infrastructure, or documentation site. |
+| Test strategy | Each change should have an appropriate validation path. | Test mix varies by stack, such as unit, integration, contract, browser, simulator, package, migration, or link checks. |
+
 ## Compatibility Matrix
 
 | Repository Type | Likely `src/` Treatment | CI Extensions To Add | Dependabot Extensions To Add | Prompt Or Doc Adjustments |
