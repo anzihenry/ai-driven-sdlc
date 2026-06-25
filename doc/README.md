@@ -21,6 +21,7 @@ Use this folder to keep the project understandable for both humans and AI tools.
 - `process/adoption-walkthrough.md` for adopting this template in a downstream repository
 - `process/ai-workflow.md` for AI collaboration flow
 - `process/minimum-template-contract.md` for what downstream adopters should keep, customize, or remove
+- `process/multi-stack-adoption.md` for adapting the template to frontend, backend, full-stack, mobile, library, or documentation repositories
 - `process/rollout-notes-template.md` for release impact, migration, and risk notes
 - `process/retrospective-learning-notes-template.md` for improving prompts and workflow from real usage
 - `process/repository-evolution-roadmap.md` for evolving this reusable template repository

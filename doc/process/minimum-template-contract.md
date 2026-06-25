@@ -58,6 +58,7 @@ Teams at this level should keep everything in Level 1, plus:
 - `.github/labeler.yml`
 - `.github/labels.json`
 - `doc/process/adoption-walkthrough.md`
+- `doc/process/multi-stack-adoption.md`
 - `doc/process/rollout-notes-template.md`
 - `doc/process/retrospective-learning-notes-template.md`
 - `doc/process/versioning-and-releases.md`

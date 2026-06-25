@@ -40,7 +40,7 @@ The outcome should be a repository that is useful as:
 
 - Phase 0 is complete: template positioning, placeholder cleanup, minimum template contract, and contract-aware CI are in place.
 - Phase 1 is complete: core specs, ADRs, delivery checklist, prompt pack, adoption walkthrough, rollout notes, and learning notes are available and covered by the template contract.
-- Phase 2 is next: define multi-stack adoption guidance, including repository patterns, `src/` usage, CI extensions, Dependabot extensions, and prompt adjustments by project type.
+- Phase 2 is in progress: `doc/process/multi-stack-adoption.md` now defines the first compatibility matrix for repository patterns, `src/` usage, CI extensions, Dependabot extensions, and prompt adjustments by project type.
 
 ## Guiding Principles
 
