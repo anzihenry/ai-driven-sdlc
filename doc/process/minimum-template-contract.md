@@ -57,9 +57,14 @@ Teams at this level should keep everything in Level 1, plus:
 - `.github/dependabot.yml`
 - `.github/labeler.yml`
 - `.github/labels.json`
+- `doc/examples/good-feature-spec.md`
+- `doc/examples/good-implementation-request.md`
+- `doc/examples/good-review-request.md`
 - `doc/examples/README.md`
 - `doc/examples/template-repository-adoption.md`
 - `doc/examples/template-repository-validation-notes.md`
+- `doc/process/ai-delivery-operating-guide.md`
+- `doc/process/ai-failure-modes.md`
 - `doc/process/adoption-walkthrough.md`
 - `doc/process/multi-stack-adoption.md`
 - `doc/process/rollout-notes-template.md`

@@ -19,8 +19,13 @@ Use this folder to keep the project understandable for both humans and AI tools.
 ## Recommended Starting Points
 
 - `specs/project-brief.md` for project context
+- `process/ai-delivery-operating-guide.md` for running repeatable AI-assisted delivery
+- `process/ai-failure-modes.md` for reviewing common AI-assisted delivery risks
 - `examples/template-repository-adoption.md` for the first proven lightweight adoption path
 - `examples/template-repository-validation-notes.md` for validation notes from walking that path
+- `examples/good-feature-spec.md` for an example of a scoped, reviewable feature spec
+- `examples/good-implementation-request.md` for an example AI implementation request
+- `examples/good-review-request.md` for an example AI review request
 - `process/adoption-walkthrough.md` for adopting this template in a downstream repository
 - `process/ai-workflow.md` for AI collaboration flow
 - `process/minimum-template-contract.md` for what downstream adopters should keep, customize, or remove
