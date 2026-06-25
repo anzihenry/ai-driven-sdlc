@@ -9,6 +9,7 @@ It assumes the adopting team wants the recommended team adoption level from `doc
 By the end of this walkthrough, the downstream repository should have:
 
 - a clear project brief
+- a documented repository type and stack adoption path
 - at least one usable feature spec
 - AI implementation and review prompts that fit the team workflow
 - GitHub issue and PR templates that match the team's process
@@ -51,7 +52,31 @@ Minimum acceptable brief:
 
 The brief does not need to be long. It does need to be specific enough that an AI agent and a human reviewer can tell what belongs in the project.
 
-## Step 4: Decide How The Repository Uses `src/`
+## Step 4: Choose The Repository Type
+
+Use `doc/process/multi-stack-adoption.md` to choose the closest repository type.
+
+Common choices include:
+
+- frontend app
+- backend API
+- full-stack app
+- mobile app
+- library or package
+- documentation or template repository
+- existing repository adopting selected template surfaces
+
+Record the chosen type in the downstream `README.md` or contribution guide.
+
+This step should answer:
+
+- which compatibility matrix row applies
+- which `src/` treatment the team will use
+- which CI checks should be added first
+- which Dependabot ecosystems are relevant
+- which prompt and documentation adjustments are needed
+
+## Step 5: Decide How The Repository Uses `src/`
 
 This template does not require one source layout.
 
@@ -61,9 +86,11 @@ Choose one approach:
 - reserve `src/` for examples or shared conventions
 - replace `src/README.md` with stack-specific guidance
 
+Use the repository type chosen in Step 4 to guide this decision.
+
 Document the choice in the downstream `README.md`. If the team keeps code outside `src/`, say where the code lives instead.
 
-## Step 5: Create The First Feature Spec
+## Step 6: Create The First Feature Spec
 
 Use `doc/specs/feature-spec-template.md` for the first real feature.
 
@@ -77,7 +104,7 @@ The first spec should include:
 
 Keep the first feature small. A thin but complete slice is more useful than a broad plan with no verification path.
 
-## Step 6: Adapt The Prompts
+## Step 7: Adapt The Prompts
 
 Review the prompts in `prompts/` before using them for implementation or review.
 
@@ -88,9 +115,11 @@ At minimum, update prompt usage notes so they mention:
 - the files or areas the AI agent may change
 - the risks reviewers should pay attention to
 
+Use `doc/process/multi-stack-adoption.md` to add repository-type-specific context and validation commands.
+
 Do not treat prompts as static policy. They should improve as the team learns which instructions produce reliable work.
 
-## Step 7: Align GitHub Automation
+## Step 8: Align GitHub Automation
 
 For Level 2 or Level 3 adoption, check the GitHub configuration:
 
@@ -100,9 +129,11 @@ For Level 2 or Level 3 adoption, check the GitHub configuration:
 - extend Dependabot only for package ecosystems the repository actually uses
 - extend CI only with checks the team can run consistently
 
+Use the repository type chosen in Step 4 to decide which CI and Dependabot extensions are relevant.
+
 If a workflow is retained but not used, either configure it or remove it intentionally.
 
-## Step 8: Run Adoption Checks
+## Step 9: Run Adoption Checks
 
 Before declaring adoption complete, run the template contract validator if it is retained:
 
@@ -113,6 +144,7 @@ python3 .github/scripts/validate_template_contract.py
 Then manually confirm:
 
 - core docs are no longer generic placeholders
+- repository type and `src/` usage are documented
 - the first feature spec can guide implementation
 - prompts can be used without heavy rewriting
 - retained automation reflects the real repository
