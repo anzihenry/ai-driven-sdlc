@@ -66,6 +66,7 @@ The smallest useful adoption of this template usually includes:
 
 For the formal keep/customize/remove contract, see `doc/process/minimum-template-contract.md`.
 For a step-by-step adoption path, see `doc/process/adoption-walkthrough.md`.
+For prompt selection guidance, see `prompts/README.md`.
 
 ## Suggested Conventions
 

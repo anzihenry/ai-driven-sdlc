@@ -26,3 +26,4 @@ Use this folder to keep the project understandable for both humans and AI tools.
 - `process/repository-evolution-roadmap.md` for evolving this reusable template repository
 - `process/versioning-and-releases.md` for version and release policy
 - `process/release-checklist.md` for release execution
+- `../prompts/README.md` for choosing the right prompt during planning, implementation, review, or acceptance

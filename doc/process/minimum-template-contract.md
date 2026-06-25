@@ -62,6 +62,7 @@ Teams at this level should keep everything in Level 1, plus:
 - `doc/process/retrospective-learning-notes-template.md`
 - `doc/process/versioning-and-releases.md`
 - `doc/process/release-checklist.md`
+- `prompts/README.md`
 - `prompts/planning.md`
 - `prompts/acceptance-qa.md`
 
