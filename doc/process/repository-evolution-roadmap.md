@@ -40,7 +40,8 @@ The outcome should be a repository that is useful as:
 
 - Phase 0 is complete: template positioning, placeholder cleanup, minimum template contract, and contract-aware CI are in place.
 - Phase 1 is complete: core specs, ADRs, delivery checklist, prompt pack, adoption walkthrough, rollout notes, and learning notes are available and covered by the template contract.
-- Phase 2 is in progress: `doc/process/multi-stack-adoption.md` now defines the first compatibility matrix for repository patterns, `src/` usage, CI extensions, Dependabot extensions, and prompt adjustments by project type.
+- Phase 2 is complete: `doc/process/multi-stack-adoption.md` defines repository patterns, universal versus stack-variable conventions, `src` usage, CI extensions, Dependabot extensions, prompt adjustments, and migration guidance.
+- Phase 3 is in progress: the next focus is proving the template through a representative adoption path and adding validation checks for example consistency.
 
 ## Guiding Principles
 
@@ -196,6 +197,12 @@ Prove that the template works in practice by validating it through representativ
 ### Example Model
 
 This roadmap assumes examples should stay lightweight and should not turn the repository into a monorepo of production applications.
+
+Chosen Phase 3 model:
+
+- Primary model: documented walkthrough plus validation notes
+- First representative scenario: documentation or template repository adoption
+- Reason: this scenario validates the template's own adoption path without coupling the repository to one application stack
 
 Preferred example order:
 
