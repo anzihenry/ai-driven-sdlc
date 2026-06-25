@@ -7,6 +7,7 @@ Use this folder to keep the project understandable for both humans and AI tools.
 - `specs/`: product context, feature specs, acceptance criteria
 - `decisions/`: architecture decision records and tradeoff notes
 - `process/`: team workflow, collaboration rules, and delivery checklists
+- `examples/`: lightweight adoption examples and validation notes
 
 ## Principles
 
@@ -18,6 +19,8 @@ Use this folder to keep the project understandable for both humans and AI tools.
 ## Recommended Starting Points
 
 - `specs/project-brief.md` for project context
+- `examples/template-repository-adoption.md` for the first proven lightweight adoption path
+- `examples/template-repository-validation-notes.md` for validation notes from walking that path
 - `process/adoption-walkthrough.md` for adopting this template in a downstream repository
 - `process/ai-workflow.md` for AI collaboration flow
 - `process/minimum-template-contract.md` for what downstream adopters should keep, customize, or remove
