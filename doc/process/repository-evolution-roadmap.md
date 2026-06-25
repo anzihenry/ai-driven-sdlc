@@ -41,7 +41,8 @@ The outcome should be a repository that is useful as:
 - Phase 0 is complete: template positioning, placeholder cleanup, minimum template contract, and contract-aware CI are in place.
 - Phase 1 is complete: core specs, ADRs, delivery checklist, prompt pack, adoption walkthrough, rollout notes, and learning notes are available and covered by the template contract.
 - Phase 2 is complete: `doc/process/multi-stack-adoption.md` defines repository patterns, universal versus stack-variable conventions, `src` usage, CI extensions, Dependabot extensions, prompt adjustments, and migration guidance.
-- Phase 3 is in progress: the next focus is proving the template through a representative adoption path and adding validation checks for example consistency.
+- Phase 3 is complete: `doc/examples/` contains a documented template-repository adoption path, paired validation notes, and CI checks for local example references.
+- Phase 4 is next: refine prompts and review guidance based on example-driven usage and recurring AI-assisted delivery patterns.
 
 ## Guiding Principles
 
