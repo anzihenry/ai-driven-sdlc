@@ -1,0 +1,68 @@
+{
+  "repository_required_files": [
+    ".editorconfig",
+    ".gitignore",
+    "README.md",
+    "CONTRIBUTING.md",
+    "doc/README.md",
+    "doc/process/minimum-template-contract.md"
+  ],
+  "core_contract_files": [
+    "doc/specs/project-brief.md",
+    "doc/specs/feature-spec-template.md",
+    "doc/decisions/ADR-template.md",
+    "doc/process/ai-workflow.md",
+    "doc/process/delivery-checklist.md",
+    "prompts/feature-implementation.md",
+    "prompts/code-review.md"
+  ],
+  "recommended_contract_files": [
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/bug_report.md",
+    ".github/ISSUE_TEMPLATE/feature_request.md",
+    ".github/ISSUE_TEMPLATE/task_request.md",
+    ".github/dependabot.yml",
+    ".github/labeler.yml",
+    ".github/labels.json",
+    "doc/process/versioning-and-releases.md",
+    "doc/process/release-checklist.md"
+  ],
+  "optional_extension_files": [
+    ".github/release-drafter.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/labeler.yml",
+    ".github/workflows/release-drafter.yml",
+    ".github/workflows/release.yml",
+    ".github/workflows/sync-labels.yml",
+    ".github/README.md",
+    ".github/CODEOWNERS",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    "src/README.md"
+  ],
+  "required_nonempty_files": [
+    "README.md",
+    "CONTRIBUTING.md",
+    "doc/README.md",
+    "doc/process/minimum-template-contract.md",
+    "doc/specs/project-brief.md",
+    "doc/specs/feature-spec-template.md",
+    "doc/decisions/ADR-template.md",
+    "doc/process/ai-workflow.md",
+    "doc/process/delivery-checklist.md",
+    "prompts/feature-implementation.md",
+    "prompts/code-review.md"
+  ],
+  "optional_nonempty_files": [
+    ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/bug_report.md",
+    ".github/ISSUE_TEMPLATE/feature_request.md",
+    ".github/ISSUE_TEMPLATE/task_request.md",
+    ".github/README.md",
+    "src/README.md",
+    "doc/process/versioning-and-releases.md",
+    "doc/process/release-checklist.md"
+  ],
+  "forbidden_paths": [
+    ".DS_Store"
+  ]
+}

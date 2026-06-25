@@ -19,5 +19,7 @@ Use this folder to keep the project understandable for both humans and AI tools.
 
 - `specs/project-brief.md` for project context
 - `process/ai-workflow.md` for AI collaboration flow
+- `process/minimum-template-contract.md` for what downstream adopters should keep, customize, or remove
+- `process/repository-evolution-roadmap.md` for evolving this reusable template repository
 - `process/versioning-and-releases.md` for version and release policy
 - `process/release-checklist.md` for release execution

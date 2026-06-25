@@ -21,11 +21,11 @@ Human release decisions are documented in:
 
 ## Next Upgrade
 
-Once the application stack is selected, extend `workflows/ci.yml` with:
+Once downstream adoption patterns are clear, extend `workflows/ci.yml` with the checks your adopters actually need, such as:
 
 - Lint
 - Test
 - Build
 - Security scanning
 
-Also extend `.github/dependabot.yml` with stack-specific ecosystems such as `npm`, `pip`, or `docker`.
+Also extend `.github/dependabot.yml` with stack-specific ecosystems such as `npm`, `pip`, or `docker` only when those ecosystems are part of the supported adoption surface.

@@ -9,69 +9,15 @@ on:
 
 jobs:
   validate-template:
-    name: Validate Template Structure
+    name: Validate Template Contract
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Verify required files
-        run: |
-          required_files=(
-            "README.md"
-            ".editorconfig"
-            ".gitignore"
-            ".github/dependabot.yml"
-            ".github/labeler.yml"
-            ".github/labels.json"
-            ".github/release-drafter.yml"
-            "doc/README.md"
-            "doc/specs/project-brief.md"
-            "doc/specs/feature-spec-template.md"
-            "doc/decisions/ADR-template.md"
-            "doc/process/ai-workflow.md"
-            "doc/process/delivery-checklist.md"
-            "doc/process/versioning-and-releases.md"
-            "doc/process/release-checklist.md"
-            "prompts/feature-implementation.md"
-            "prompts/code-review.md"
-            "src/README.md"
-          )
-
-          for file in "${required_files[@]}"; do
-            if [ ! -f "$file" ]; then
-              echo "Missing required file: $file"
-              exit 1
-            fi
-          done
-
-      - name: Validate markdown templates
-        run: |
-          markdown_files=(
-            "README.md"
-            "doc/README.md"
-            "doc/specs/project-brief.md"
-            "doc/specs/feature-spec-template.md"
-            "doc/decisions/ADR-template.md"
-            "doc/process/ai-workflow.md"
-            "doc/process/delivery-checklist.md"
-            "prompts/feature-implementation.md"
-            "prompts/code-review.md"
-            "src/README.md"
-            ".github/PULL_REQUEST_TEMPLATE.md"
-            ".github/ISSUE_TEMPLATE/bug_report.md"
-            ".github/ISSUE_TEMPLATE/feature_request.md"
-            ".github/ISSUE_TEMPLATE/task_request.md"
-            "CONTRIBUTING.md"
-          )
-
-          for file in "${markdown_files[@]}"; do
-            if [ ! -s "$file" ]; then
-              echo "Markdown file is missing or empty: $file"
-              exit 1
-            fi
-          done
+      - name: Validate template contract
+        run: python3 .github/scripts/validate_template_contract.py
 
       - name: Guard against macOS metadata
         run: |
@@ -83,5 +29,5 @@ jobs:
 
       - name: Reminder for stack-specific checks
         run: |
-          echo "Template validation passed."
-          echo "Add stack-specific lint, test, and build jobs after the application stack is chosen."
+          echo "Template contract validation passed."
+          echo "Core template files are required; recommended and optional surfaces are validated when present."

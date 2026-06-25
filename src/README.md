@@ -1,12 +1,18 @@
 # Source Directory
 
-Place the actual product code here.
+This directory is a flexible adoption surface.
 
-Suggested examples:
+Downstream teams may use it in any of these ways:
+
+1. Place real product code here
+2. Keep lightweight examples or sample layouts here
+3. Replace this file with stack-specific guidance during adoption
+
+Possible structures include:
 
 - `src/web/` for a frontend app
 - `src/api/` for backend services
 - `src/mobile/` for mobile clients
 - `src/shared/` for shared libraries
 
-Keep the final structure aligned to the chosen stack instead of forcing a generic pattern for too long.
+Use the layout that best fits the downstream project. This template does not require one canonical source structure.

@@ -2,26 +2,27 @@
 
 ## Working Principles
 
-- Start from a spec when the change affects product behavior
+- Start from a spec when the change affects adopter-facing behavior
 - Keep changes small and reviewable
 - Treat AI-generated output as a draft until verified
 - Capture meaningful technical decisions in `doc/decisions/`
+- Optimize for reuse across multiple downstream stacks, not one preferred implementation
 
 ## Default Delivery Flow
 
 1. Create or update the relevant issue
-2. Write or refine the spec in `doc/specs/`
-3. Implement the smallest complete change
-4. Validate locally
+2. Write or refine the spec in `doc/specs/` or update the relevant process guidance
+3. Implement the smallest complete template change
+4. Validate the template impact locally
 5. Open a pull request using the repository template
 6. Record follow-up work before merge if anything is deferred
 
 ## AI-Assisted Development Expectations
 
 - State clearly which tool was used
-- Review generated code for correctness and security
-- Remove dead code or speculative abstractions
-- Document assumptions in the PR if they affect behavior
+- Review generated content for correctness, clarity, portability, and security
+- Remove dead guidance or speculative abstractions
+- Document assumptions in the PR if they affect adopters
 
 ## Pull Request Expectations
 
@@ -29,7 +30,7 @@
 - Summarize risk and validation steps
 - Include screenshots or logs when they help review
 - Keep unrelated changes out of the PR
-- Add labels when they affect release notes or version bumps
+- Add labels when they affect release notes, adopter expectations, or version bumps
 
 ## Label Guide
 
@@ -54,10 +55,11 @@
 - Use `skip-changelog` on PRs that should stay out of release notes
 - Follow `doc/process/versioning-and-releases.md` when choosing the next version
 - Run `doc/process/release-checklist.md` before publishing
+- Treat downstream migration cost as the primary signal for major releases
 
 ## Review Guidelines
 
-- Prioritize correctness and user impact
-- Call out missing tests or verification gaps
+- Prioritize correctness, adopter clarity, and downstream impact
+- Call out missing validation steps or upgrade guidance
 - Prefer concrete suggestions over broad opinions
 - Be explicit when something should be deferred to follow-up
