@@ -24,6 +24,9 @@ Gather:
 - draft release notes:
 - related specs, ADRs, or rollout notes:
 - migration notes, if required:
+- distribution channel:
+- announcement draft:
+- adopter upgrade rehearsal notes:
 
 ## Step 1: Confirm Repository State
 
@@ -92,7 +95,33 @@ Confirm:
 - the version matches the release impact
 - release notes are ready for review
 
-## Step 6: Decide Go Or No-Go
+## Step 6: Rehearse Publication
+
+Use `doc/process/release-publication-guide.md` and `doc/process/distribution-channels.md`.
+
+Confirm:
+
+- chosen distribution channel matches the release
+- generated GitHub Release notes will be reviewed before being treated as final
+- release announcement draft exists if adopters need to understand impact
+- publication owner is named
+- post-release follow-up location is known
+- release notes link migration, validation, or upgrade guidance when needed
+
+## Step 7: Rehearse Adopter Upgrade
+
+Use `doc/process/adopter-upgrade-path.md`.
+
+Confirm:
+
+- at least one adopter path is named: template repository, fork, release archive, tag-based adoption, or manual sync
+- adopter can identify the target tag or release artifact
+- contract changes are understandable for Level 1, Level 2, and Level 3 adopters
+- likely conflict areas are named
+- validation after upgrade is documented
+- rollback or safe deferral guidance is present
+
+## Step 8: Decide Go Or No-Go
 
 Go only if:
 
@@ -101,6 +130,8 @@ Go only if:
 - CI and manual validation evidence are available
 - migration notes exist when needed
 - release notes explain downstream impact
+- publication and distribution steps are clear
+- adopter upgrade rehearsal found no blocking ambiguity
 - maintainers agree the target is releasable
 
 If no-go, record:
@@ -115,4 +146,6 @@ If no-go, record:
 - Result: Go / No-go
 - Reviewed by:
 - Date:
+- Distribution channel:
+- Upgrade rehearsal result:
 - Notes:
