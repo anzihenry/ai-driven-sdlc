@@ -21,6 +21,8 @@ Examples:
 
 ## How To Choose The Next Version
 
+Choose the version based on downstream adopter impact, not only maintainer effort.
+
 ### Patch release
 
 Use a patch release when the change is small and backward-compatible.
@@ -32,6 +34,9 @@ Typical examples:
 - CI or tooling fixes
 - Template polish that does not change expected usage
 - Dependency updates with no breaking behavior
+- Clarifying wording in existing templates
+- Non-behavioral cleanup in release or validation workflows
+- Fixing examples without changing the adoption contract
 
 ### Minor release
 
@@ -43,6 +48,9 @@ Typical examples:
 - New prompt packs
 - New automation workflows
 - New reusable documentation patterns
+- New optional example adoption paths
+- New optional validation checks
+- New recommended guidance that does not invalidate current adoption
 
 ### Major release
 
@@ -54,6 +62,35 @@ Typical examples:
 - Removing or renaming core templates
 - Workflow changes that alter how contributors must work
 - Breaking automation or release policy changes
+- Changing Level 1, Level 2, or Level 3 adoption expectations in a way that forces downstream work
+- Renaming or removing contract-governed files
+- Changing `.github/template-contract.json` semantics in a way that invalidates current adopters
+- Replacing the prompt flow, delivery checklist, or review expectations with incompatible guidance
+
+## Template-Specific Version Examples
+
+| Change | Likely Version | Why |
+| --- | --- | --- |
+| Fix typos in `doc/specs/feature-spec-template.md` | Patch | No expected adopter workflow changes. |
+| Clarify wording in `prompts/code-review.md` without changing expected inputs or outputs | Patch | Improves existing guidance without migration. |
+| Add a new optional prompt under `prompts/` and register it as Level 2 recommended | Minor | Adds capability while preserving existing adopters. |
+| Add a new example adoption path under `doc/examples/` | Minor | Adds reusable guidance without breaking current usage. |
+| Add a new optional CI validation rule that only checks retained files | Minor | Adds template quality protection without forcing all adopters to change. |
+| Rename `doc/specs/feature-spec-template.md` | Major | Breaks documented paths and downstream references. |
+| Remove `prompts/feature-implementation.md` from Level 1 | Major | Changes the minimum supported adoption shape. |
+| Change the meaning of Level 2 adoption | Major | Forces downstream teams to reassess retained surfaces. |
+
+## Breaking Change Test
+
+Before choosing a major version, ask:
+
+- Does this force downstream adopters to rename, move, or recreate files
+- Does this invalidate a documented adoption path
+- Does this change the minimum template contract
+- Does this change required review, validation, or release behavior
+- Does this require migration notes for a team already using the template
+
+If any answer is yes, treat the change as major unless there is a clearly documented compatibility path.
 
 ## Label-To-Version Rules
 
@@ -95,6 +132,8 @@ Use these artifacts together:
 - Confirm the target version number
 - Confirm no breaking changes are unlabeled
 - Confirm docs reflect any workflow or structure changes
+- Confirm release notes explain adopter-facing impact
+- Confirm migration notes exist when downstream action is required
 
 ## Publishing A Release
 
