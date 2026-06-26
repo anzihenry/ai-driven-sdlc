@@ -47,7 +47,7 @@ The outcome should be a repository that is useful as:
 - Phase 4 is complete: AI delivery operating guidance, failure modes, good examples, prompt hardening, and checklist updates are available and covered by the template contract.
 - Phase 5 is complete: template-aware versioning examples, migration notes, release checklist upgrades, dry-run release practice, and release automation boundaries are available and covered by the template contract.
 - Phase 6 is complete: adopter quickstart, adoption decision tree, customization checklist, adoption prompt, adopter-facing contract validation guidance, and contract/index registration are in place.
-- Phase 7 is next: define distribution channels, publication flow, adopter upgrade path, announcement templates, release prompt support, and publication dry-run practice.
+- Phase 7 is complete: distribution channels, release publication flow, adopter upgrade path, announcement template, release publication prompt, automation boundaries, contract/index registration, and publication dry-run practice are in place.
 
 ## Guiding Principles
 
