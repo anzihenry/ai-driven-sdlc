@@ -153,6 +153,30 @@ Downstream teams may choose any of these approaches:
 
 What matters is that the chosen approach is documented clearly in `README.md` and, if relevant, `src/README.md`.
 
+## Contract Validator For Adopters
+
+If this repository is copied with `.github/scripts/validate_template_contract.py`, run:
+
+```sh
+python3 .github/scripts/validate_template_contract.py
+```
+
+The validator checks repository hygiene, required template files, adoption-level sync, example references, and optional surfaces that are present.
+
+For adopters, validation results should be interpreted this way:
+
+| Result | Meaning | Adopter Action |
+| --- | --- | --- |
+| Pass | The copied template surface is internally consistent. | Continue adoption and record validation evidence. |
+| Missing Level 1 file | The minimum AI-assisted workflow may be incomplete. | Restore the file or document the equivalent replacement. |
+| Level list mismatch | Human docs and machine contract disagree. | Update this document and `.github/template-contract.json` together. |
+| Optional file present but empty | A retained optional surface exists but is not usable. | Fill it in or remove it intentionally. |
+| Forbidden path found | Repository hygiene failed. | Remove the forbidden file before review or release. |
+
+Validation does not decide whether the template is a good fit for the project. It only confirms that retained template surfaces are coherent.
+
+If an adopter intentionally removes or replaces a contract file, the decision should be recorded in the adopting repository's README, adoption PR, or equivalent planning artifact.
+
 ## Adoption Completion Checklist
 
 A downstream team should not consider adoption complete until:
