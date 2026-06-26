@@ -22,7 +22,7 @@ The roadmap makes the following repository-level decisions explicit:
 
 ## Roadmap Goal
 
-Move the repository through six stages:
+Move the repository through seven stages:
 
 1. Template baseline
 2. Template capability expansion
@@ -30,6 +30,7 @@ Move the repository through six stages:
 4. Example and validation coverage
 5. Governance and release maturity
 6. Self-service adoption kit
+7. Distribution, packaging, and release publication
 
 The outcome should be a repository that is useful as:
 
@@ -46,6 +47,7 @@ The outcome should be a repository that is useful as:
 - Phase 4 is complete: AI delivery operating guidance, failure modes, good examples, prompt hardening, and checklist updates are available and covered by the template contract.
 - Phase 5 is complete: template-aware versioning examples, migration notes, release checklist upgrades, dry-run release practice, and release automation boundaries are available and covered by the template contract.
 - Phase 6 is complete: adopter quickstart, adoption decision tree, customization checklist, adoption prompt, adopter-facing contract validation guidance, and contract/index registration are in place.
+- Phase 7 is next: define distribution channels, publication flow, adopter upgrade path, announcement templates, release prompt support, and publication dry-run practice.
 
 ## Guiding Principles
 
@@ -372,6 +374,50 @@ Make the template easy for a new downstream team to adopt, customize, and valida
 - AI can be prompted to produce a concrete adoption plan from repository context
 - Contract validation errors are understandable to adopters, not only maintainers
 
+## Phase 7: Distribution, Packaging, And Release Publication
+
+### Goal
+
+Make the template publishable as a reusable product that downstream adopters can discover, pin, upgrade, and announce safely.
+
+### Scope
+
+- Define supported distribution channels for the template
+- Document how maintainers publish a release from validation through announcement
+- Document how adopters upgrade from one template version to another
+- Add release announcement and publication prompt support
+- Extend dry-run practice to cover distribution and adopter upgrade rehearsal
+
+### Detailed Work
+
+- Define when to use GitHub template repositories, forks, release archives, tag-based adoption, or manual sync
+- Create a maintainer-facing release publication guide with pre-publish, publish, and post-publish steps
+- Create an adopter upgrade path covering version choice, diff review, migration notes, contract changes, and validation
+- Add a release announcement template focused on adopter impact, migration cost, validation evidence, and rollback guidance
+- Add an AI prompt that helps prepare release notes, migration summaries, publication checklists, and announcement drafts
+- Align GitHub automation documentation with the boundary between automated release creation and human publication decisions
+- Register publication assets in the template contract and documentation indexes
+- Extend release dry runs to rehearse distribution and adopter upgrade flow
+
+### Deliverables
+
+- Distribution channel guide
+- Release publication guide
+- Adopter upgrade path
+- Release announcement template
+- Release publication prompt
+- Updated GitHub automation documentation
+- Updated contract and documentation indexes
+- Publication dry-run coverage
+
+### Exit Criteria
+
+- Maintainers can publish a versioned template release without inventing process
+- Adopters can choose whether to pin, fork, copy, or manually sync the template
+- Release announcements explain adopter impact and migration requirements
+- Upgrade guidance covers contract changes, conflicts, validation, and rollback
+- Publication dry runs include both maintainer release steps and downstream adopter rehearsal
+
 ## Recommended Execution Order
 
 1. Finish Phase 0 before broadening template scope
@@ -381,6 +427,7 @@ Make the template easy for a new downstream team to adopt, customize, and valida
 5. Run Phase 4 alongside actual maintenance and adoption feedback
 6. Use Phase 5 to support sustainable versioned releases
 7. Use Phase 6 to make adoption self-service for downstream teams
+8. Use Phase 7 to make releases discoverable, publishable, and upgradeable
 
 ## Practical First Sprint
 
@@ -424,6 +471,12 @@ If the goal is to improve the repository quickly without losing focus, the first
 - Adopters can choose an adoption path without maintainer guidance
 - Adoption prompts and checklists produce concrete next actions
 
+### Milestone F: Published Template Product
+
+- Phase 7 complete
+- Maintainers can publish releases with repeatable evidence
+- Adopters can upgrade from a tagged template version safely
+
 ## Risks To Avoid
 
 - Drifting from stack-agnostic guidance into one preferred implementation
@@ -442,3 +495,4 @@ This roadmap succeeds when the repository is clearly usable as a reusable AI-dri
 - validation paths that prove the template works
 - release and governance rules that help downstream teams upgrade safely
 - self-service adoption guidance that turns the template into a practical starting point
+- distribution and publication guidance that makes versioned adoption repeatable
