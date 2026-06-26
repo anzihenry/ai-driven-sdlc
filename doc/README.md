@@ -30,9 +30,11 @@ Use this folder to keep the project understandable for both humans and AI tools.
 - `process/ai-workflow.md` for AI collaboration flow
 - `process/minimum-template-contract.md` for what downstream adopters should keep, customize, or remove
 - `process/multi-stack-adoption.md` for adapting the template to frontend, backend, full-stack, mobile, library, or documentation repositories
+- `process/migration-notes-template.md` for explaining adopter-facing upgrade work
 - `process/rollout-notes-template.md` for release impact, migration, and risk notes
 - `process/retrospective-learning-notes-template.md` for improving prompts and workflow from real usage
 - `process/repository-evolution-roadmap.md` for evolving this reusable template repository
 - `process/versioning-and-releases.md` for version and release policy
 - `process/release-checklist.md` for release execution
+- `process/release-dry-run.md` for rehearsing a template release before publishing it
 - `../prompts/README.md` for choosing the right prompt during planning, implementation, review, or acceptance

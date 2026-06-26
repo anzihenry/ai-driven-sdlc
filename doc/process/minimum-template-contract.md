@@ -67,10 +67,12 @@ Teams at this level should keep everything in Level 1, plus:
 - `doc/process/ai-failure-modes.md`
 - `doc/process/adoption-walkthrough.md`
 - `doc/process/multi-stack-adoption.md`
+- `doc/process/migration-notes-template.md`
 - `doc/process/rollout-notes-template.md`
 - `doc/process/retrospective-learning-notes-template.md`
 - `doc/process/versioning-and-releases.md`
 - `doc/process/release-checklist.md`
+- `doc/process/release-dry-run.md`
 - `prompts/README.md`
 - `prompts/planning.md`
 - `prompts/acceptance-qa.md`
