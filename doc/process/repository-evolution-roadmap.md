@@ -22,13 +22,14 @@ The roadmap makes the following repository-level decisions explicit:
 
 ## Roadmap Goal
 
-Move the repository through five stages:
+Move the repository through six stages:
 
 1. Template baseline
 2. Template capability expansion
 3. Multi-stack adoption design
 4. Example and validation coverage
 5. Governance and release maturity
+6. Self-service adoption kit
 
 The outcome should be a repository that is useful as:
 
@@ -44,6 +45,7 @@ The outcome should be a repository that is useful as:
 - Phase 3 is complete: `doc/examples/` contains a documented template-repository adoption path, paired validation notes, and CI checks for local example references.
 - Phase 4 is complete: AI delivery operating guidance, failure modes, good examples, prompt hardening, and checklist updates are available and covered by the template contract.
 - Phase 5 is complete: template-aware versioning examples, migration notes, release checklist upgrades, dry-run release practice, and release automation boundaries are available and covered by the template contract.
+- Phase 6 is next: package the adoption flow so downstream teams can choose a path, customize required files, ask AI for help, and validate adoption without maintainer hand-holding.
 
 ## Guiding Principles
 
@@ -333,6 +335,43 @@ The following are usually not breaking on their own:
 - Release notes explain impact on adopters, not just internal repository changes
 - Breaking template changes include clear migration guidance
 
+## Phase 6: Build A Self-Service Adoption Kit
+
+### Goal
+
+Make the template easy for a new downstream team to adopt, customize, and validate without needing maintainer walkthroughs.
+
+### Scope
+
+- Provide a short adopter quickstart for different time budgets
+- Add a decision path for choosing the right adoption route
+- Turn customization guidance into a practical checklist
+- Add a prompt that helps AI generate a repository-specific adoption plan
+- Explain contract validation in adopter-facing language
+
+### Detailed Work
+
+- Create a quickstart that covers the first 5 minutes, 30 minutes, and half day of adoption
+- Create a decision tree for new projects, existing projects, documentation repositories, tool or library repositories, and product repositories
+- Create a customization checklist for files adopters must update, may remove, or should preserve
+- Add an adoption prompt that asks AI to inspect a repository and produce an adoption plan, file changes, risks, and validation steps
+- Update docs and contract metadata so the self-service assets are discoverable and protected from drift
+
+### Deliverables
+
+- Adopter quickstart
+- Adoption decision tree
+- Template customization checklist
+- Template adoption prompt
+- Updated documentation index and contract registration
+
+### Exit Criteria
+
+- A new adopter can identify the correct adoption path without reading the entire repository
+- A new adopter can see which files to customize, keep, defer, or remove
+- AI can be prompted to produce a concrete adoption plan from repository context
+- Contract validation errors are understandable to adopters, not only maintainers
+
 ## Recommended Execution Order
 
 1. Finish Phase 0 before broadening template scope
@@ -341,6 +380,7 @@ The following are usually not breaking on their own:
 4. Use Phase 3 to validate the template through realistic usage
 5. Run Phase 4 alongside actual maintenance and adoption feedback
 6. Use Phase 5 to support sustainable versioned releases
+7. Use Phase 6 to make adoption self-service for downstream teams
 
 ## Practical First Sprint
 
@@ -378,6 +418,12 @@ If the goal is to improve the repository quickly without losing focus, the first
 - Prompt refinements are based on real usage
 - Releases communicate impact to adopters clearly
 
+### Milestone E: Self-Service Adoption
+
+- Phase 6 complete
+- Adopters can choose an adoption path without maintainer guidance
+- Adoption prompts and checklists produce concrete next actions
+
 ## Risks To Avoid
 
 - Drifting from stack-agnostic guidance into one preferred implementation
@@ -395,3 +441,4 @@ This roadmap succeeds when the repository is clearly usable as a reusable AI-dri
 - adoption guidance for multiple stacks
 - validation paths that prove the template works
 - release and governance rules that help downstream teams upgrade safely
+- self-service adoption guidance that turns the template into a practical starting point
