@@ -45,7 +45,7 @@ The outcome should be a repository that is useful as:
 - Phase 3 is complete: `doc/examples/` contains a documented template-repository adoption path, paired validation notes, and CI checks for local example references.
 - Phase 4 is complete: AI delivery operating guidance, failure modes, good examples, prompt hardening, and checklist updates are available and covered by the template contract.
 - Phase 5 is complete: template-aware versioning examples, migration notes, release checklist upgrades, dry-run release practice, and release automation boundaries are available and covered by the template contract.
-- Phase 6 is next: package the adoption flow so downstream teams can choose a path, customize required files, ask AI for help, and validate adoption without maintainer hand-holding.
+- Phase 6 is complete: adopter quickstart, adoption decision tree, customization checklist, adoption prompt, adopter-facing contract validation guidance, and contract/index registration are in place.
 
 ## Guiding Principles
 
