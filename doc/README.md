@@ -26,6 +26,8 @@ Use this folder to keep the project understandable for both humans and AI tools.
 - `examples/good-feature-spec.md` for an example of a scoped, reviewable feature spec
 - `examples/good-implementation-request.md` for an example AI implementation request
 - `examples/good-review-request.md` for an example AI review request
+- `process/adopter-quickstart.md` for the shortest safe path into the template
+- `process/adoption-decision-tree.md` for choosing the right adoption path
 - `process/adoption-walkthrough.md` for adopting this template in a downstream repository
 - `process/ai-workflow.md` for AI collaboration flow
 - `process/minimum-template-contract.md` for what downstream adopters should keep, customize, or remove
@@ -34,6 +36,7 @@ Use this folder to keep the project understandable for both humans and AI tools.
 - `process/rollout-notes-template.md` for release impact, migration, and risk notes
 - `process/retrospective-learning-notes-template.md` for improving prompts and workflow from real usage
 - `process/repository-evolution-roadmap.md` for evolving this reusable template repository
+- `process/template-customization-checklist.md` for first-time adopter customization tasks
 - `process/versioning-and-releases.md` for version and release policy
 - `process/release-checklist.md` for release execution
 - `process/release-dry-run.md` for rehearsing a template release before publishing it

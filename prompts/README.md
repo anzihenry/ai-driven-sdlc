@@ -13,12 +13,15 @@ Use the prompts in this order for a typical delivery cycle:
 3. `code-review.md`
 4. `acceptance-qa.md`
 
+For template adoption work, use `template-adoption.md` before the delivery cycle to choose an adoption level, file plan, and validation path.
+
 The flow is not mandatory. Choose the prompt that matches the current state of the work.
 
 ## Prompt Index
 
 | Prompt | Use When | Required Input | Expected Output |
 | --- | --- | --- | --- |
+| `template-adoption.md` | A new or existing repository needs a concrete plan for adopting this template. | Repository purpose, current tree or relevant files, desired adoption level if known, constraints, existing CI or release process. | Adoption level recommendation, file action plan, stack-variable decisions, risks, validation plan, completion checklist. |
 | `planning.md` | The request is still ambiguous and needs to become specs, roadmap items, or implementation tasks. | Rough request, repository context, known constraints, existing decisions. | Problem framing, scope recommendation, proposed specs or tasks, first useful slice, open decisions, validation strategy. |
 | `feature-implementation.md` | A spec or clear task exists and an AI coding agent should implement a scoped change. | Goal, relevant files, spec context, in/out scope, validation expectations, definition of done. | Implemented change summary, validation performed, assumptions, risks, follow-ups. |
 | `code-review.md` | A diff, PR, commit range, or changed-file summary is ready for review. | Repository context, relevant spec or ADR, expected validation, change under review. | Findings ordered by severity, open questions, validation gaps, concise review summary. |
@@ -27,6 +30,7 @@ The flow is not mandatory. Choose the prompt that matches the current state of t
 ## Boundary Rules
 
 - Use `planning.md` before implementation when scope, users, acceptance, or ownership is unclear.
+- Use `template-adoption.md` before planning when the question is how to adopt this template into a repository.
 - Use `feature-implementation.md` only after the desired change can be stated as a small complete slice.
 - Use `code-review.md` when there is concrete output to review, such as a diff or changed-file summary.
 - Use `acceptance-qa.md` when the question is whether the implementation satisfies the spec.
