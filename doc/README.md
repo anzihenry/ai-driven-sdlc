@@ -20,6 +20,7 @@ Use this folder to keep the project understandable for both humans and AI tools.
 
 - `specs/project-brief.md` for project context
 - `process/ai-delivery-operating-guide.md` for running repeatable AI-assisted delivery
+- `process/ai-security-and-permissions.md` for AI tool data, command, and permission boundaries
 - `process/ai-failure-modes.md` for reviewing common AI-assisted delivery risks
 - `examples/template-repository-adoption.md` for the first proven lightweight adoption path
 - `examples/template-repository-validation-notes.md` for validation notes from walking that path

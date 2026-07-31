@@ -10,6 +10,7 @@ The goal is to make AI collaboration repeatable, reviewable, and grounded in rep
 - Keep each change tied to a spec, ADR, issue, or checklist
 - Use AI for drafting, implementation support, review support, and validation planning
 - Keep human judgment responsible for scope, correctness, security, release impact, and merge decisions
+- Apply `doc/process/ai-security-and-permissions.md` before sharing sensitive data, running privileged commands, or using external services
 - Record validation evidence before merge
 - Feed lessons back into prompts, templates, and checklists
 

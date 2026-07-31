@@ -65,6 +65,7 @@ Teams at this level should keep everything in Level 1, plus:
 - `doc/examples/template-repository-validation-notes.md`
 - `doc/process/ai-delivery-operating-guide.md`
 - `doc/process/ai-failure-modes.md`
+- `doc/process/ai-security-and-permissions.md`
 - `doc/process/adopter-quickstart.md`
 - `doc/process/adopter-upgrade-path.md`
 - `doc/process/adoption-decision-tree.md`
